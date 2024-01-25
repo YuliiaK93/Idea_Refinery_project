@@ -20,8 +20,7 @@ import java.util.List;
 
         @GetMapping
         public List<TaskDTO> getAllTasks(){
-         List<TaskDTO> list = taskService.getAllTasks();
-            return list;
+            return taskService.getAllTasks();
 
         }
         @GetMapping("{id}")

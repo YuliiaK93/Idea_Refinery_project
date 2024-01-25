@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -15,7 +16,6 @@ public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
 
     private String title;
@@ -24,9 +24,9 @@ public class Task {
 
     private Boolean completed;
 
-    private Date createdDate;
+    private LocalDate createdDate;
 
-    private Date completedDate;
+    private LocalDate completedDate;
 
 
 }

@@ -12,15 +12,10 @@ public class TaskDTO {
 
 
     private Long id;
-
     private String title;
-
     private String description;
-
     private Boolean completed;
-
     private LocalDateTime createdDate;
-
     private LocalDateTime completedDate;
 
 
