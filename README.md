@@ -14,7 +14,7 @@ Prerequisites
         
   3. Run the application
            
-  4. The application will be accessible at HTTP://localhost:8080/h2 to check the connection with the H2 in-memory database
+  4. The application will be accessible at http://localhost:8080/h2 to check the connection with the H2 in-memory database
            To connect H2:
            Driver Class: org.h2.Driver
            JDBC URL: jdbc:h2:mem:assignment
