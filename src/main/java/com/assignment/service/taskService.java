@@ -14,4 +14,6 @@ public interface taskService {
     TaskDTO createTask(TaskDTO task);
 
     void updateTask(Long taskId, TaskDTO task);
+
+    List<TaskDTO> getTasksByTitle(String title);
 }

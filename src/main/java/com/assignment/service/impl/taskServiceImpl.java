@@ -55,4 +55,9 @@ public class taskServiceImpl implements taskService {
         });
 
     }
+
+    public List<TaskDTO> getTasksByTitle(String title){
+        List<Task> list = taskRepository.findAllByTitle(title);
+        return list.stream().map(obj ->mapperUtil.convert(obj, new TaskDTO())).collect(Collectors.toList());
+    }
 }
