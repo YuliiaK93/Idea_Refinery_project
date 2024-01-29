@@ -43,5 +43,15 @@ public class TaskController_ResponseEntity {
                 .header("Operation", "Create")
                 .body(taskService.createTask(task));
     }
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> deleteTaskById(@PathVariable ("id") Long taskId){
+        taskService.deleteTaskById(taskId);
+        return ResponseEntity.noContent().build();
+    }
+    @PutMapping("{id}")
+    public ResponseEntity<Void> updateTask(@PathVariable("id") Long taskId, @RequestBody TaskDTO task){
+        taskService.updateTask(taskId, task);
+        return ResponseEntity.noContent().build();
+    }
 
 }

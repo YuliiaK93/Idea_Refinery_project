@@ -60,4 +60,9 @@ public class taskServiceImpl implements taskService {
         List<Task> list = taskRepository.findAllByTitle(title);
         return list.stream().map(obj ->mapperUtil.convert(obj, new TaskDTO())).collect(Collectors.toList());
     }
+
+    @Override
+    public void deleteTaskById(Long taskId) {
+        taskRepository.deleteById(taskId);
+    }
 }
